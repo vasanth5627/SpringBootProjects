@@ -1,0 +1,70 @@
+server:
+  port: 8082
+
+#spring:
+#  profiles:
+#    active: dev
+
+
+---
+
+spring:
+#  config:
+#    activate:
+  profile: dev
+
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: Nani5627@
+    url: jdbc:mysql://localhost:3306/spring_api
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Vasanth
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+
+---
+
+#spring:
+#  spring:
+#    config:
+#      activate:
+#    profile: qa
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    password: Nani5627@
+#    url: jdbc:mysql://localhost:3306/spring_api-qa
+#    username: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#welcome:
+#  message: Welcome to Vasanth Kumar
+
+#---
+#spring:
+#  spring:
+#    config:
+#      activate:
+#        on-profile: prod
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    password: Nani5627@
+#    url: jdbc:mysql://localhost:3306/spring_api-prod
+#    username: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#welcome:
+#  message: Welcome to Vasanth Kumar
